@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>教員のためのセカンドキャリア独立・転職伴走塾｜きたじー（北島 一道）</title>
+    <meta name="description" content="公立高校教員25年・7,200人を育てて独立し、個人事業主4年目を迎えた「きたじー」が直接伴走する、現役教員専門のキャリア自立プログラム。">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #276749;       /* フォレストグリーン（信頼・教育） */
+            --primary-light: #f0fff4;
+            --primary-dark: #1c4532;
+            --accent: #dd6b20;        /* せなドン・オレンジ（情熱・一歩踏み出す） */
+            --accent-hover: #c05621;
+            --navy: #1a365d;          /* 実績・重厚感 */
+            --text-main: #2d3748;
+            --text-muted: #718096;
+            --bg-light: #f7fafc;
+            --bg-white: #ffffff;
+            --border: #e2e8f0;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'BIZ UDPGothic', 'Noto Sans JP', sans-serif;
+            color: var(--text-main);
+            background-color: var(--bg-white);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* 共通コンテナ */
+        .container {
+            width: 100%;
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 上部固定バー */
+        .top-switcher-bar {
+            background: var(--navy);
+            color: #ffffff;
+            padding: 8px 16px;
+            font-size: 13px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .top-switcher-bar a {
+            color: #bee3f8;
+            text-decoration: underline;
+            margin-left: 10px;
+        }
+
+        /* ヘッダー */
+        .site-header {
+            padding: 16px 0;
+            border-bottom: 1px solid var(--border);
+            background: #ffffff;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .logo-icon {
+            font-size: 28px;
+        }
+        .logo-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1.2;
+        }
+        .logo-sub {
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+        .header-btn {
+            background: var(--accent);
+            color: #ffffff;
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 13px;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+        .header-btn:hover {
+            background: var(--accent-hover);
+        }
+
+        /* ヒーローセクション（ファーストビュー） */
+        .hero {
+            background: linear-gradient(135deg, #f0fff4 0%, #e6fffa 100%);
+            padding: 60px 0 70px;
+            border-bottom: 1px solid #c6f6d5;
+            position: relative;
+        }
+        .badge-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #ffffff;
+            border: 1px solid #38a169;
+            color: var(--primary);
+            font-size: 13px;
+            font-weight: 700;
+            padding: 6px 16px;
+            border-radius: 50px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .hero h1 {
+            font-size: 32px;
+            line-height: 1.4;
+            color: var(--navy);
+            margin-bottom: 20px;
+            font-weight: 900;
+        }
+        .hero h1 .highlight {
+            background: linear-gradient(transparent 65%, #fbd38d 65%);
+            color: var(--primary-dark);
+        }
+        .hero-lead {
+            font-size: 16px;
+            color: #4a5568;
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+        .hero-cta-box {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: var(--shadow-lg);
+            border-left: 6px solid var(--accent);
+            max-width: 650px;
+        }
+        .cta-label {
+            font-size: 13px;
+            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+        .cta-btn-main {
+            display: block;
+            text-align: center;
+            background: var(--accent);
+            color: #ffffff;
+            padding: 16px 24px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 900;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(221, 107, 32, 0.35);
+            transition: transform 0.15s, background 0.2s;
+        }
+        .cta-btn-main:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+        .cta-caption {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-align: center;
+            margin-top: 8px;
+        }
+
+        /* セクション共通 */
+        section {
+            padding: 60px 0;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .section-tag {
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .section-heading {
+            font-size: 26px;
+            color: var(--navy);
+            margin-top: 6px;
+            font-weight: 700;
+        }
+
+        /* 悩みセクション */
+        .pain-section {
+            background: #ffffff;
+        }
+        .pain-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+        .pain-card {
+            background: #fffaf0;
+            border: 1px solid #feebc8;
+            border-radius: 10px;
+            padding: 24px;
+            position: relative;
+        }
+        .pain-card-icon {
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+        .pain-card-title {
+            font-weight: 700;
+            font-size: 16px;
+            color: #9c4221;
+            margin-bottom: 8px;
+        }
+        .pain-card-desc {
+            font-size: 14px;
+            color: #7b341e;
+            line-height: 1.6;
+        }
+
+        /* ストーリー・きたじーの紹介 */
+        .story-section {
+            background: var(--bg-light);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .story-box {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 36px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+        }
+        .story-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 24px;
+            border-bottom: 2px solid var(--primary-light);
+            padding-bottom: 20px;
+        }
+        .story-avatar {
+            width: 84px;
+            height: 84px;
+            background: #ffffff;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid var(--accent);
+            box-shadow: var(--shadow);
+            flex-shrink: 0;
+        }
+        .story-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .story-name-area h3 {
+            font-size: 20px;
+            color: var(--navy);
+        }
+        .story-name-area p {
+            font-size: 13px;
+            color: var(--primary);
+            font-weight: 700;
+        }
+        .story-body p {
+            font-size: 15px;
+            margin-bottom: 16px;
+            color: #4a5568;
+            line-height: 1.8;
+        }
+        .story-highlight {
+            background: #ebf8ff;
+            border-left: 4px solid #3182ce;
+            padding: 16px;
+            border-radius: 0 8px 8px 0;
+            font-weight: 700;
+            color: #2c5282;
+            margin: 20px 0;
+        }
+
+        /* インタラクティブ診断ツール */
+        .diagnostic-section {
+            background: linear-gradient(135deg, #ebf8ff 0%, #f0fff4 100%);
+        }
+        .diagnostic-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 36px;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid #bee3f8;
+        }
+        .diagnostic-card h3 {
+            font-size: 20px;
+            color: var(--navy);
+            text-align: center;
+            margin-bottom: 8px;
+        }
+        .diagnostic-card p.subtitle {
+            text-align: center;
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 24px;
+        }
+        .check-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+        .check-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            background: #f7fafc;
+            padding: 12px 16px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .check-item:hover {
+            background: #edf2f7;
+            border-color: #cbd5e0;
+        }
+        .check-item input[type="checkbox"] {
+            margin-top: 4px;
+            width: 18px;
+            height: 18px;
+            accent-color: var(--primary);
+            cursor: pointer;
+        }
+        .check-text {
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .diag-result-box {
+            display: none;
+            background: #f0fff4;
+            border: 2px solid #38a169;
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+            margin-top: 20px;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .diag-score {
+            font-size: 24px;
+            font-weight: 900;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+        .diag-message {
+            font-size: 15px;
+            color: #276749;
+            margin-bottom: 16px;
+            line-height: 1.6;
+        }
+
+        /* プログラムカリキュラム */
+        .curriculum-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin-top: 30px;
+        }
+        .curriculum-card {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-top: 4px solid var(--primary);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: var(--shadow);
+        }
+        .curriculum-step {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+        .curriculum-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 10px;
+        }
+        .curriculum-card ul {
+            padding-left: 16px;
+            font-size: 13px;
+            color: #4a5568;
+        }
+        .curriculum-card li {
+            margin-bottom: 4px;
+        }
+
+        /* 料金・プラン */
+        .pricing-section {
+            background: var(--bg-light);
+        }
+        .pricing-box {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 16px;
+            border: 2px solid var(--primary);
+            box-shadow: var(--shadow-lg);
+            overflow: hidden;
+        }
+        .pricing-header {
+            background: var(--primary);
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+        .pricing-header h3 {
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .pricing-body {
+            padding: 32px;
+            text-align: center;
+        }
+        .pricing-amount {
+            font-size: 38px;
+            font-weight: 900;
+            color: var(--navy);
+            margin: 12px 0;
+        }
+        .pricing-tax {
+            font-size: 14px;
+            color: var(--text-muted);
+            font-weight: normal;
+        }
+        .pricing-features {
+            text-align: left;
+            margin: 24px 0;
+            padding: 0 10px;
+        }
+        .pricing-features li {
+            font-size: 14px;
+            padding: 8px 0;
+            border-bottom: 1px dashed var(--border);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .pricing-features li::before {
+            content: "✔";
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        /* CTA予約セクション */
+        .cta-section {
+            background: linear-gradient(135deg, #1a365d 0%, #2b6cb0 100%);
+            color: #ffffff;
+            padding: 70px 0;
+            text-align: center;
+        }
+        .cta-section h2 {
+            font-size: 28px;
+            margin-bottom: 16px;
+            color: #ffffff;
+        }
+        .cta-section p {
+            font-size: 15px;
+            color: #bee3f8;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .booking-card {
+            background: #ffffff;
+            color: var(--text-main);
+            border-radius: 12px;
+            max-width: 520px;
+            margin: 0 auto;
+            padding: 30px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+            text-align: left;
+        }
+        .form-group {
+            margin-bottom: 16px;
+        }
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 6px;
+            color: #4a5568;
+        }
+        .form-control {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            font-size: 14px;
+            font-family: inherit;
+        }
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(56, 161, 105, 0.2);
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            background: var(--accent);
+            color: #ffffff;
+            padding: 14px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 900;
+            cursor: pointer;
+            transition: background 0.2s;
+            margin-top: 10px;
+        }
+        .submit-btn:hover {
+            background: var(--accent-hover);
+        }
+
+        /* フッター */
+        footer {
+            background: #171923;
+            color: #a0aec0;
+            padding: 30px 0;
+            font-size: 12px;
+            text-align: center;
+        }
+
+        /* レスポンシブ */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 24px; }
+            .hero-lead { font-size: 14px; }
+            .story-header { flex-direction: column; text-align: center; }
+            .curriculum-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- プロトタイプ・スイッチャーバー -->
+    <div class="top-switcher-bar">
+        <div>
+            <strong>💡 プロトタイプ画面：【案1 キラーLP】教員セカンドキャリア独立塾</strong>
+        </div>
+        <div>
+            <a href="portal.html">【案2】統合ポータル画面を見る ➔</a>
+            <a href="index.html">法人向けコーポレート画面を見る ➔</a>
+        </div>
+    </div>
+
+    <!-- ヘッダー -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo-area">
+                <span class="logo-icon">🌳</span>
+                <div>
+                    <div class="logo-title">教員セカンドキャリア伴走塾</div>
+                    <div class="logo-sub">運営：きたじまのき（代表 北島 一道）</div>
+                </div>
+            </div>
+            <a href="#booking" class="header-btn">無料個別相談を予約</a>
+        </div>
+    </header>
+
+    <!-- ファーストビュー（ヒーロー） -->
+    <section class="hero">
+        <div class="container">
+            <div class="badge-pill">
+                <span>🎓</span> 公立教員25年 ➔ 個人事業主4年目の実践知を全伝授
+            </div>
+            <h1>
+                「職員室の枠」を越えて、<br>
+                <span class="highlight">自分の名前で生きていく。</span>
+            </h1>
+            <p class="hero-lead">
+                25年間、7,200人の生徒と向き合ってきた元公立高校教員（きたじー）が、<br>
+                あなたの背中を温かく、力強くドン！と後押しする4ヶ月間の個別伴走プログラム。
+            </p>
+
+            <div class="hero-cta-box">
+                <div class="cta-label">🔥 毎月5名限定・完全個別対応</div>
+                <a href="#booking" class="cta-btn-main">
+                    まずは「無料個別Zoom相談」で話してみる ➔
+                </a>
+                <div class="cta-caption">※ 無理な勧誘は一切ありません。あなたの現状のモヤモヤを整理する時間です。</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 悩みセクション -->
+    <section class="pain-section">
+        <div class="container">
+            <div class="section-title">
+                <div class="section-tag">悩んでいませんか？</div>
+                <h2 class="section-heading">教員だからこそ抱える、誰にも言えないリアルな本音</h2>
+            </div>
+
+            <div class="pain-grid">
+                <div class="pain-card">
+                    <div class="pain-card-icon">⏳</div>
+                    <div class="pain-card-title">業務に追われ、心がすり減る</div>
+                    <div class="pain-card-desc">授業、部活動、生徒指導、保護者対応……気づけば土日も仕事のことで頭がいっぱい。「この生活をあと何十年続けるのか」と不安になる。</div>
+                </div>
+                <div class="pain-card">
+                    <div class="pain-card-icon">🚪</div>
+                    <div class="pain-card-title">外の世界に出てみたいが怖い</div>
+                    <div class="pain-card-desc">「教員以外の社会を知らない」「民間企業で自分の経験が通用するのか」という強い恐怖と、安定した公務員身分を手放すことへの葛藤。</div>
+                </div>
+                <div class="pain-card">
+                    <div class="pain-card-icon">🧭</div>
+                    <div class="pain-card-title">相談できる相手が周囲にいない</div>
+                    <div class="pain-card-desc">同僚や家族には「辞めたい」なんて本音は言えない。民間の転職エージェントに相談しても「学校現場の苦しみ」は理解してもらえない。</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- きたじーのストーリー -->
+    <section class="story-section">
+        <div class="container">
+            <div class="story-box">
+                <div class="story-header">
+                    <div class="story-avatar">
+                        <img src="kitaji_avatar.png" alt="北島 一道（きたじー）">
+                    </div>
+                    <div class="story-name-area">
+                        <h3>北島 一道（きたじー）</h3>
+                        <p>元公立高校 体育教員25年 / 次世代リーダー育成コーチ / 個人事業主4年目</p>
+                    </div>
+                </div>
+                <div class="story-body">
+                    <p>
+                        僕もあなたとまったく同じでした。岡山県の公立高校で25年間、熱血体育教師として7,200人以上の生徒の成長に伴走し、やりがいはありました。しかし、40代後半を迎えたとき、**「自分の人生、このままで本当に後悔しないか？」「もっと広い社会で、教育の力を試したい」**という想いが爆発したのです。
+                    </p>
+                    <div class="story-highlight">
+                        「教員が民間で稼げるわけがない」周囲からは猛反対されました。でも、正しい準備とマインドセットさえあれば、教員のスキルは社会で最高に重宝される『金の鉱脈』です。
+                    </div>
+                    <p>
+                        独立して4年。現在は一部上場企業から中小企業まで、若手育成や組織開発の研修・コーチングで全国からオファーをいただき、経済的にも時間的にも自由な生活を手に入れました。48歳からは未経験でテナーサックスにも挑戦し、挑戦し続ける人生を満喫しています。
+                    </p>
+                    <p>
+                        次は、あなたの番です。僕が25年間の現場経験と、4年間の独立奮闘で培った「教員が民間で自立するための全ロードマップ」をあなたに直接授けます。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- インタラクティブ診断ツール -->
+    <section class="diagnostic-section">
+        <div class="container">
+            <div class="diagnostic-card">
+                <h3>🔍 30秒でわかる！教員スキルの「民間通用度」簡易チェック</h3>
+                <p class="subtitle">当てはまる項目にチェックを入れてみてください。</p>
+
+                <div class="check-list">
+                    <label class="check-item">
+                        <input type="checkbox" class="diag-chk" onchange="calculateScore()">
+                        <span class="check-text">生徒や保護者の本音を引き出す「傾聴」が得意だ</span>
+                    </label>
+                    <label class="check-item">
+                        <input type="checkbox" class="diag-chk" onchange="calculateScore()">
+                        <span class="check-text">部活動や行事で、チームをまとめて動かした経験がある</span>
+                    </label>
+                    <label class="check-item">
+                        <input type="checkbox" class="diag-chk" onchange="calculateScore()">
+                        <span class="check-text">難しい内容を、相手にわかりやすく噛み砕いて伝えるのが好き</span>
+                    </label>
+                    <label class="check-item">
+                        <input type="checkbox" class="diag-chk" onchange="calculateScore()">
+                        <span class="check-text">人の成長や変化に立ち会う瞬間に、何よりも喜びを感じる</span>
+                    </label>
+                    <label class="check-item">
+                        <input type="checkbox" class="diag-chk" onchange="calculateScore()">
+                        <span class="check-text">誰かに言われた指示通りではなく、自分で企画を形にしたい</span>
+                    </label>
+                    <label class="check-item">
+                        <input type="checkbox" class="diag-chk" onchange="calculateScore()">
+                        <span class="check-text">「何歳からでも挑戦できる」姿を子どもたちに見せたい</span>
+                    </label>
+                </div>
+
+                <div id="diagResult" class="diag-result-box">
+                    <div id="diagScore" class="diag-score"></div>
+                    <div id="diagMessage" class="diag-message"></div>
+                    <a href="#booking" class="cta-btn-main" style="max-width:380px; margin: 0 auto; font-size:15px; padding:12px;">
+                        診断結果をもとにZoomで個別相談する ➔
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4ヶ月プログラム カリキュラム -->
+    <section class="curriculum-section">
+        <div class="container">
+            <div class="section-title">
+                <div class="section-tag">カリキュラム</div>
+                <h2 class="section-heading">4ヶ月で「自立して稼げる自分」をつくる集中伴走ステップ</h2>
+            </div>
+
+            <div class="curriculum-grid">
+                <div class="curriculum-card">
+                    <div class="curriculum-step">STEP 1（1ヶ月目）</div>
+                    <div class="curriculum-title">強みの発掘＆換算</div>
+                    <ul>
+                        <li>学校経験の棚卸しと言語化</li>
+                        <li>教員スキルを「民間ビジネス価値」に換算</li>
+                        <li>公務員マインドからの脱却</li>
+                    </ul>
+                </div>
+                <div class="curriculum-card">
+                    <div class="curriculum-step">STEP 2（2ヶ月目）</div>
+                    <div class="curriculum-title">自分だけの独自商品設計</div>
+                    <ul>
+                        <li>ターゲット（企業・個人）の明確化</li>
+                        <li>高単価でも喜ばれるサービスパッケージ化</li>
+                        <li>価格設定とオファー設計</li>
+                    </ul>
+                </div>
+                <div class="curriculum-card">
+                    <div class="curriculum-step">STEP 3（3ヶ月目）</div>
+                    <div class="curriculum-title">発信＆テストマーケティング</div>
+                    <ul>
+                        <li>note・SNSでのファン化導線づくり</li>
+                        <li>想いが伝わるプロフィールの完成</li>
+                        <li>モニター獲得とテストセッション実践</li>
+                    </ul>
+                </div>
+                <div class="curriculum-card">
+                    <div class="curriculum-step">STEP 4（4ヶ月目）</div>
+                    <div class="curriculum-title">ファーストキャッシュ獲得</div>
+                    <ul>
+                        <li>提案書・個別面談クロージング技術</li>
+                        <li>契約・請求・税金等の独立実務</li>
+                        <li>次の一歩を踏み出す「せなドン合宿」</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 料金プラン -->
+    <section class="pricing-section">
+        <div class="container">
+            <div class="section-title">
+                <div class="section-tag">受講費用</div>
+                <h2 class="section-heading">人生の次のステージへ進むための自己投資</h2>
+            </div>
+
+            <div class="pricing-box">
+                <div class="pricing-header">
+                    <h3>教員セカンドキャリア集中伴走プログラム（4ヶ月）</h3>
+                </div>
+                <div class="pricing-body">
+                    <div class="pricing-tax">一括受講料</div>
+                    <div class="pricing-amount">550,000 <span style="font-size:20px;">円（税込）</span></div>
+                    <p style="font-size:13px; color:#718096;">※ 分割払い（最大12回）にも対応しています。</p>
+
+                    <ul class="pricing-features">
+                        <li>月2回の個別Zoomオンラインコーチング（計8回）</li>
+                        <li>チャット（LINE/Slack）での無制限・質問相談サポート</li>
+                        <li>提案書・オリジナル教材・プロフィール添削（無制限）</li>
+                        <li>きたじー直伝「せなドン」ファシリテーション教材の提供</li>
+                        <li>受講生・卒業生限定のクローズド勉強会・交流コミュニティ</li>
+                    </ul>
+
+                    <a href="#booking" class="cta-btn-main" style="margin-top:20px;">
+                        無料個別Zoom相談を申し込む ➔
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 予約フォーム -->
+    <section class="cta-section" id="booking">
+        <div class="container">
+            <h2>まずは、あなたの今の想いを聞かせてください。</h2>
+            <p>
+                「まだ辞めると決めたわけではない」「漠然とした不安がある」という段階で全く問題ありません。教員25年を経験したきたじーが、1対1でじっくりお話を伺います。
+            </p>
+
+            <div class="booking-card">
+                <form id="consultForm" onsubmit="handleBooking(event)">
+                    <div class="form-group">
+                        <label for="name">お名前 <span style="color:#e53e3e;">*</span></label>
+                        <input type="text" id="name" class="form-control" placeholder="山田 太郎" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">メールアドレス <span style="color:#e53e3e;">*</span></label>
+                        <input type="email" id="email" class="form-control" placeholder="example@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="role">現在の状況 <span style="color:#e53e3e;">*</span></label>
+                        <select id="role" class="form-control" required>
+                            <option value="">選択してください</option>
+                            <option value="公立小中高校教員">公立小中高校 教員</option>
+                            <option value="私立学校教員">私立学校 教員</option>
+                            <option value="特別支援学校・非常勤">特別支援・非常勤・教育関係職</option>
+                            <option value="既に退職済み">すでに退職済み・休職中</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">今一番モヤモヤしていること（任意）</label>
+                        <textarea id="message" class="form-control" rows="3" placeholder="例：民間企業で通用するか不安、家族にどう切り出すか悩んでいる、など"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        無料個別Zoom相談に申し込む（毎月5名限定）
+                    </button>
+                    <p style="font-size:11px; color:#718096; text-align:center; margin-top:8px;">
+                        ※ 送信後、24時間以内に日程調整のご連絡を差し上げます。個人情報は厳守します。
+                    </p>
+                </form>
+                <div id="bookingSuccess" style="display:none; text-align:center; padding:20px; color:#276749;">
+                    <div style="font-size:36px; margin-bottom:10px;">🎉</div>
+                    <h3 style="font-size:18px; margin-bottom:8px;">お申し込みを受け付けました！</h3>
+                    <p style="font-size:13px;">ご登録いただいたメールアドレス宛に、日程調整のご案内をお送りいたしました。当日お話しできることを心から楽しみにしています！</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 きたじまのき All Rights Reserved.｜次世代リーダー育成コーチ 北島 一道（きたじー）</p>
+            <p style="margin-top:6px; color:#4a5568;">岡山県岡山市（全国オンライン対応）</p>
+        </div>
+    </footer>
+
+    <!-- スクリプト -->
+    <script>
+        function calculateScore() {
+            const chks = document.querySelectorAll('.diag-chk:checked');
+            const count = chks.length;
+            const resBox = document.getElementById('diagResult');
+            const scoreEl = document.getElementById('diagScore');
+            const msgEl = document.getElementById('diagMessage');
+
+            if (count > 0) {
+                resBox.style.display = 'block';
+                if (count >= 5) {
+                    scoreEl.innerHTML = `🌟 民間通用度：95%（超有望レベル！）`;
+                    msgEl.innerHTML = `素晴らしい素質です！あなたが現場で培ってきた「傾聴」「対話」「チームビルディング」は、今の中小企業や若手が最も求めているスキルそのものです。独立・副業でも初年度から結果を出せる可能性が非常に高いです。`;
+                } else if (count >= 3) {
+                    scoreEl.innerHTML = `✨ 民間通用度：75%（十分自立可能レベル）`;
+                    msgEl.innerHTML = `教員としての強みがしっかり備わっています！あとは「公務員の枠」を外し、ビジネスとしてのパッケージ化（値付け・提案方法）を学べば、十分に自分の名前で活躍できます。`;
+                } else {
+                    scoreEl.innerHTML = `🌱 民間通用度：50%（伸び代たっぷりレベル）`;
+                    msgEl.innerHTML = `大丈夫です。最初は誰でもゼロからのスタートです。まずは教員現場で無意識に使っている「対話の引き出し」を自覚することから一緒に始めましょう！`;
+                }
+            } else {
+                resBox.style.display = 'none';
+            }
+        }
+
+        function handleBooking(e) {
+            e.preventDefault();
+            document.getElementById('consultForm').style.display = 'none';
+            document.getElementById('bookingSuccess').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
